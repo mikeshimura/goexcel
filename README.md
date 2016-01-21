@@ -22,7 +22,7 @@ go get -u github.com/mikeshimura/goexcel
 
 - Color density can be used.
 
-- Border patterns are already definedas constant.
+- Border patterns are already defined as constant.
 
 - Fill patterns are already defined as constant.
 
@@ -41,7 +41,7 @@ Pre defined Border pattern and Fill pattern Sample
 - Open Existing Excel  
  OpenFile(filename string) error  
 
-- Sheet handling
+- Sheet handling  
  AddSheet(name string) error  
  AddSheetPanic(name string)  
  SetSheet(name string) error  
@@ -68,8 +68,8 @@ Styles are stored as map[string]*xlsx.Style
  CreateStyleByKey(keyname string, font string, size int, border string,
  borderPattern string)
 
-- Copy Style  
-  CopyStyle(oldkey string, newkey string)
+- Copy Style   
+  CopyStyle(oldkey string, newkey string)  
   //Using this command, style can be inherited.
 
 - Set Font
@@ -105,19 +105,19 @@ SetFill(keyname string, pattern string,	fgColor string,bgColor string)
  SetIntFormat(rowno int, colno int, i int, fmt string)   
  SetFloat(rowno int, colno int, f float64)  
  SetFloatFormat(rowno int, colno int, f float64, fmt string)  
- SetDate(rowno int, colno int, t time.Time)
+ SetDate(rowno int, colno int, t time.Time)  
  SetDateFormat(rowno int, colno int, t time.Time, fmt string)  
  SetDateTime(rowno int, colno int, t time.Time)  
- SetDateTimeFormat(rowno int, colno int, t time.Time, fmt string)
+ SetDateTimeFormat(rowno int, colno int, t time.Time, fmt string)  
  SetString(rowno int, colno int, s string)
  SetFormula(rowno int, colno int, formula string)  
  SetFormat(rowno int, colno int, fmt string)  
 
- ##License  
+##License  
 
  goexcel is released under the MIT License. It is copyrighted by Masanobu Shimura. (Gmail mikeshimura)
 
- ##Sample program
+##Sample program
 
  [sample source](https://github.com/mikeshimura/goexcel/blob/master/example/simple1.go)
  ```go
