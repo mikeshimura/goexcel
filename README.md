@@ -109,7 +109,7 @@ SetFill(keyname string, pattern string,	fgColor string,bgColor string)
  SetDateFormat(rowno int, colno int, t time.Time, fmt string)  
  SetDateTime(rowno int, colno int, t time.Time)  
  SetDateTimeFormat(rowno int, colno int, t time.Time, fmt string)  
- SetString(rowno int, colno int, s string)
+ SetString(rowno int, colno int, s string)  
  SetFormula(rowno int, colno int, formula string)  
  SetFormat(rowno int, colno int, fmt string)  
 
