@@ -1,0 +1,3 @@
+‘darkTrellis’, ‘lightGray’, ‘mediumGray’, ‘lightGrid’, ‘lightDown’, ‘gray0625’,
+‘lightTrellis’, ‘lightUp’, ‘darkUp’, ‘darkVertical’, ‘gray125’, ‘solid’, ‘darkDown’, ‘darkHorizontal’,
+‘lightVertical’, ‘darkGrid’, ‘lightHorizontal’, ‘darkGray’
