@@ -5,7 +5,7 @@ Excel Generator for Go
 This program use github.com/tealeg/xlsx for excel generation.
 
 Generated Excel Sample
-![Simple1](https://bytebucket.org/mikeshimura/goreport/wiki/image/simple1excel.jpg?rev=1aa18b6b0462f4880c32a6e9de3fa7fbc78d0bac "Simple1")
+![Simple1](https://bytebucket.org/mikeshimura/goreport/wiki/image/simple1excel.jpg "Simple1")
 
 [excel](https://bytebucket.org/mikeshimura/goreport/wiki/excel/simple1.xlsx)
 
