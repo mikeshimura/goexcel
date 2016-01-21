@@ -141,7 +141,8 @@ SetFill(keyname string, pattern string,	fgColor string,bgColor string)
  	//Style TBLR
  	excel.CopyStyle("base", "TBLR")
  	excel.SetBorder("TBLR", "TBLR", ge.BDR_Hair)
- 	excel.SetFill("TBLR", ge.PTN_Solid, ge.ColorDencity(ge.CLR_Blue, 20), ge.Color(ge.CLR_Yellow))
+ 	excel.SetFill("TBLR", ge.PTN_Solid, ge.ColorDencity(ge.CLR_Blue, 20),  
+    ge.Color(ge.CLR_Yellow))
 
  	//Style TBLR_Right
  	excel.CopyStyle("TBLR", "TBLR_R")
@@ -149,8 +150,8 @@ SetFill(keyname string, pattern string,	fgColor string,bgColor string)
 
  	//Style TITLE
  	excel.CreateStyleByKey("TITLE", "Arial", 24, "TBLR", ge.BDR_Double)
- 	excel.SetFill("TITLE", ge.PTN_Gray125, ge.ColorDencity(ge.CLR_Black, 50),
- 		"CCCCFF")
+ 	excel.SetFill("TITLE", ge.PTN_Gray125,
+    ge.ColorDencity(ge.CLR_Black, 50),"CCCCFF")
  	excel.SetItalic("TITLE", true)
  	excel.SetHorizontalAlign("TITLE", ge.H_Center)
  	//Style DATE
@@ -160,7 +161,8 @@ SetFill(keyname string, pattern string,	fgColor string,bgColor string)
  	//Style Header
  	excel.CopyStyle("TBLR", "HEADER")
  	excel.SetBold("HEADER", true)
- 	excel.SetFill("HEADER", ge.PTN_Solid, ge.ColorDencity(ge.CLR_Blue, 40), ge.Color(ge.CLR_Yellow))
+ 	excel.SetFill("HEADER", ge.PTN_Solid, ge.ColorDencity(ge.CLR_Blue, 40),  
+   ge.Color(ge.CLR_Yellow))
  	excel.SetBorder("HEADER", "TB", ge.BDR_Medium)
  	excel.SetHorizontalAlign("HEADER", ge.H_Center)
 
