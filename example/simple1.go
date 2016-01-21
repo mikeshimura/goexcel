@@ -61,7 +61,7 @@ func Simple1() {
 		excel.SetStyleByKey(1, col, "TITLE")
 	}
 	excel.Merge(1, 1, 1, 6)
-	excel.SetString(1, 1, "Goexcel Sample Report-Sample1")
+	excel.SetString(1, 1, "Goexcel Sample Report-Simple1")
 
 	excel.SetStyleByKey(0, 8, "DATE")
 	excel.SetDateFormat(0, 8, time.Now(), "yyyy/mm/dd")
