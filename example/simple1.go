@@ -93,7 +93,7 @@ func Simple1() {
 		excel.SetStyleByKey(5+i, 8, "TBLR_R")
 		t, err := time.Parse("2006/01/02", cols[0])
 		if err != nil {
-			panic(cols[0] + "、は日付ではありません")
+			panic(cols[0] + "is not date")
 		}
 		excel.SetDateFormat(5+i, 0, t, "yyyy/mm/dd")
 		excel.SetString(5+i, 1, cols[1])
