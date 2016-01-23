@@ -55,8 +55,8 @@ Pre defined Border pattern and Fill pattern Sample
 Colors are predefined like CLR_Blue  
 
 - Color Set  
- Color(color string) string  
- // use like Color(ge.CLR_Blue)  
+ ge.CLR_Blue 
+ // use like ge.CLR_Blue  
 
  ColorDencity(color string, dencity int) string  
  // use like ColorDencity(ge.CLR_Blue, 20)
@@ -142,7 +142,7 @@ SetFill(keyname string, pattern string,	fgColor string,bgColor string)
  	excel.CopyStyle("base", "TBLR")
  	excel.SetBorder("TBLR", "TBLR", ge.BDR_Hair)
  	excel.SetFill("TBLR", ge.PTN_Solid, ge.ColorDencity(ge.CLR_Blue, 20),  
-    ge.Color(ge.CLR_Yellow))
+    ge.CLR_Yellow)
 
  	//Style TBLR_Right
  	excel.CopyStyle("TBLR", "TBLR_R")
@@ -162,7 +162,7 @@ SetFill(keyname string, pattern string,	fgColor string,bgColor string)
  	excel.CopyStyle("TBLR", "HEADER")
  	excel.SetBold("HEADER", true)
  	excel.SetFill("HEADER", ge.PTN_Solid, ge.ColorDencity(ge.CLR_Blue, 40),  
-   ge.Color(ge.CLR_Yellow))
+   ge.CLR_Yellow)
  	excel.SetBorder("HEADER", "TB", ge.BDR_Medium)
  	excel.SetHorizontalAlign("HEADER", ge.H_Center)
 

@@ -32,7 +32,7 @@ func ParameterSample() {
 		ss := ge.PatternMap[s]
 		fmt.Println(ss)
 		excel.CopyStyle("base", ss)
-		excel.SetFill(ss, ss, ge.Color(ge.CLR_Blue), ge.Color(ge.CLR_Yellow))
+		excel.SetFill(ss, ss, ge.CLR_Blue, ge.CLR_Yellow)
 		excel.SetStyleByKey(2+i*2, 2, ss)
 		excel.SetString(2+i*2, 2, "PTN_"+s)
 		i++

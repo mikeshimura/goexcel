@@ -59,7 +59,7 @@ func (e *Goexcel) SetColWidth(startCol int, endCol int,width float64){
 }
 func (e *Goexcel) GetRow(no int) *xlsx.Row {
 	addRowNo := no - e.Sheet.MaxRow + 1
-	fmt.Printf("addRowNo %v \n", addRowNo)
+	//fmt.Printf("addRowNo %v \n", addRowNo)
 	for i := 0; i < addRowNo; i++ {
 		e.Sheet.AddRow()
 		fmt.Printf("i %v \n", i)
@@ -70,7 +70,7 @@ func (e *Goexcel) GetRow(no int) *xlsx.Row {
 func (e *Goexcel) GetCell(rowno int, colno int) *xlsx.Cell {
 	row := e.GetRow(rowno)
 	addColNo := colno - len(row.Cells) + 1
-	fmt.Printf("addColNo %v \n", addColNo)
+	//fmt.Printf("addColNo %v \n", addColNo)
 	for i := 0; i < addColNo; i++ {
 		row.AddCell()
 		fmt.Printf("i %v \n", i)
@@ -241,7 +241,7 @@ func (e *Goexcel) SetFontColor(keyname string, color string) {
 	if style.Font.Name == "" {
 		panic("Style " + keyname + " not found or Font Name not defined")
 	}
-	style.Font.Color=color
+	style.Font.Color=Color(color)
 }
 func (e *Goexcel) SetItalic(keyname string, italic bool) {
 	style := e.Style[keyname]
@@ -279,8 +279,8 @@ func (e *Goexcel) SetBorder(keyname string, border string,
 		panic("Style " + keyname + " not found or Font Name not defined")
 	}
 	style.Fill.PatternType=pattern
-	style.Fill.FgColor=fgColor
-	style.Fill.BgColor=bgColor
+	style.Fill.FgColor=Color(fgColor)
+	style.Fill.BgColor=Color(bgColor)
 }
 func (e *Goexcel) SetHorizontalAlign(keyname string, alignment string) {
 	style := e.Style[keyname]

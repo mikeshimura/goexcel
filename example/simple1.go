@@ -18,7 +18,7 @@ func Simple1() {
 	//Style TBLR
 	excel.CopyStyle("base", "TBLR")
 	excel.SetBorder("TBLR", "TBLR", ge.BDR_Hair)
-	excel.SetFill("TBLR", ge.PTN_Solid, ge.ColorDencity(ge.CLR_Blue, 20), ge.Color(ge.CLR_Yellow))
+	excel.SetFill("TBLR", ge.PTN_Solid, ge.ColorDencity(ge.CLR_Blue, 20), ge.CLR_Yellow)
 
 	//Style TBLR_Right
 	excel.CopyStyle("TBLR", "TBLR_R")
@@ -37,7 +37,7 @@ func Simple1() {
 	//Style Header
 	excel.CopyStyle("TBLR", "HEADER")
 	excel.SetBold("HEADER", true)
-	excel.SetFill("HEADER", ge.PTN_Solid, ge.ColorDencity(ge.CLR_Blue, 40), ge.Color(ge.CLR_Yellow))
+	excel.SetFill("HEADER", ge.PTN_Solid, ge.ColorDencity(ge.CLR_Blue, 40), ge.CLR_Yellow)
 	excel.SetBorder("HEADER", "TB", ge.BDR_Medium)
 	excel.SetHorizontalAlign("HEADER", ge.H_Center)
 
