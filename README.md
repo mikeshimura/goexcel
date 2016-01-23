@@ -55,7 +55,7 @@ Pre defined Border pattern and Fill pattern Sample
 Colors are predefined like CLR_Blue  
 
 - Color Set  
- ge.CLR_Blue 
+ ge.CLR_Blue
  // use like ge.CLR_Blue  
 
  ColorDencity(color string, dencity int) string  
@@ -81,11 +81,13 @@ Styles are stored as map[string]*xlsx.Style
  SetUnderline(keyname string, underline bool)  
 
 - Set Border  
-SetBorder(keyname string, border string,borderPattern string)  
+SetBorder(keyname string, border string, borderPattern string)  
 // border "T" top  "B" bottom  "L" left  "R" right  
 
+ SetBorderColor (keyname string, border string, color string)
+
 - Set Fill  
-SetFill(keyname string, pattern string,	fgColor string,bgColor string)  
+SetFill(keyname string, pattern string,	fgColor string, bgColor string)  
 
 - Set Alignment  
  SetHorizontalAlign(keyname string, alignment string)  
