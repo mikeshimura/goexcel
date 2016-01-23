@@ -33,15 +33,15 @@ func Color(color string) string {
 	cs := hex.EncodeToString([]byte{colorx.R, colorx.G, colorx.B})
 	return strings.ToUpper(cs)
 }
-func ColorDencity(color string, dencity int) string {
+func ColorDencity(color string, density int) string {
 	colorm := ColorMap[strings.ToUpper(color[0:1])+color[1:]]
 	if colorm == "" {
 		panic(color + ": not defined ")
 	}
 	colorx := colornames.Map[colorm]
-	cs := hex.EncodeToString([]byte{getColorElement(colorx.R, dencity),
-		getColorElement(colorx.G, dencity),
-		getColorElement(colorx.B, dencity)})
+	cs := hex.EncodeToString([]byte{getColorElement(colorx.R, density),
+		getColorElement(colorx.G, density),
+		getColorElement(colorx.B, density)})
 	return strings.ToUpper(cs)
 }
 func getColorElement(color uint8, dencity int) uint8 {

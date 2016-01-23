@@ -53,9 +53,9 @@ func (e *Goexcel) CopyStyle(oldkey string, newkey string) {
 	style.Font = sold.Font
 	e.Style[newkey] = style
 }
-func (e *Goexcel) SetColWidth(startCol int, endCol int,width float64){
-	e.GetCell(0,endCol)
-	e.Sheet.SetColWidth(startCol, endCol,width)
+func (e *Goexcel) SetColWidth(startCol int, endCol int, width float64) {
+	e.GetCell(0, endCol)
+	e.Sheet.SetColWidth(startCol, endCol, width)
 }
 func (e *Goexcel) GetRow(no int) *xlsx.Row {
 	addRowNo := no - e.Sheet.MaxRow + 1
@@ -188,14 +188,13 @@ func (e *Goexcel) GetStyle(rowno int, colno int) *xlsx.Style {
 	return cell.GetStyle()
 }
 
-
 func (e *Goexcel) Merge(rowno int, colno int, toRowNo int, toColNo int) {
-	rows:=toRowNo-rowno+1
-	cols:=toColNo-colno+1
-	if rows < 1{
+	rows := toRowNo - rowno + 1
+	cols := toColNo - colno + 1
+	if rows < 1 {
 		panic("toRowNo must be greater than rowno")
 	}
-	if cols < 1{
+	if cols < 1 {
 		panic("toColNo must be greater than colno")
 	}
 	for row := rowno; row < rowno+cols-1; row++ {
@@ -241,7 +240,7 @@ func (e *Goexcel) SetFontColor(keyname string, color string) {
 	if style.Font.Name == "" {
 		panic("Style " + keyname + " not found or Font Name not defined")
 	}
-	style.Font.Color=Color(color)
+	style.Font.Color = Color(color)
 }
 func (e *Goexcel) SetItalic(keyname string, italic bool) {
 	style := e.Style[keyname]
@@ -272,15 +271,35 @@ func (e *Goexcel) SetBorder(keyname string, border string,
 	}
 	setBorderSub(style, border, borderPattern)
 }
-	func (e *Goexcel) SetFill(keyname string, pattern string,
-	fgColor string,bgColor string) {
+func (e *Goexcel) SetBorderColor(keyname string, border string,
+	color string) {
 	style := e.Style[keyname]
 	if style.Font.Name == "" {
 		panic("Style " + keyname + " not found or Font Name not defined")
 	}
-	style.Fill.PatternType=pattern
-	style.Fill.FgColor=Color(fgColor)
-	style.Fill.BgColor=Color(bgColor)
+	border = strings.ToUpper(border)
+	if strings.Contains(border, "T") {
+		style.Border.TopColor = Color(color)
+	}
+	if strings.Contains(border, "B") {
+		style.Border.BottomColor = Color(color)
+	}
+	if strings.Contains(border, "R") {
+		style.Border.RightColor = Color(color)
+	}
+	if strings.Contains(border, "L") {
+		style.Border.LeftColor = Color(color)
+	}
+}
+func (e *Goexcel) SetFill(keyname string, pattern string,
+	fgColor string, bgColor string) {
+	style := e.Style[keyname]
+	if style.Font.Name == "" {
+		panic("Style " + keyname + " not found or Font Name not defined")
+	}
+	style.Fill.PatternType = pattern
+	style.Fill.FgColor = Color(fgColor)
+	style.Fill.BgColor = Color(bgColor)
 }
 func (e *Goexcel) SetHorizontalAlign(keyname string, alignment string) {
 	style := e.Style[keyname]
