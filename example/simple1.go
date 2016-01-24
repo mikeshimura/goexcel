@@ -17,7 +17,7 @@ func Simple1() {
 
 	//Style TBLR
 	excel.CopyStyle("base", "TBLR")
-	excel.SetBorder("TBLR", "TBLR", ge.BDR_Hair)
+	excel.SetBorder("TBLR", "TBLR", ge.BDR_Thin)
 	excel.SetFill("TBLR", ge.PTN_Solid, ge.ColorDencity(ge.CLR_Blue, 20), ge.CLR_Yellow)
 
 	//Style TBLR_Right
