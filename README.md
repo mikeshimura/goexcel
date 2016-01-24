@@ -9,12 +9,12 @@ Generated Excel Sample
 
 [excel](https://bytebucket.org/mikeshimura/goreport/wiki/excel/simple1.xlsx)
 
-##Installation
+## Installation
 ```
 go get -u github.com/mikeshimura/goexcel
 ```
 
-##Concept
+## Concept
 
 - Easy to generate Excel
 
@@ -33,7 +33,7 @@ Pre defined Border pattern and Fill pattern Sample
 
 [excel](https://bytebucket.org/mikeshimura/goreport/wiki/excel/parameter.xlsx)
 
-##Setup Command
+## Setup Command
 
 - New Excel  
  CreateGoexcel()
@@ -47,11 +47,11 @@ Pre defined Border pattern and Fill pattern Sample
  SetSheet(name string) error  
  SetSheetPanic(name string)  
 
-##File Write Command  
+## File Write Command  
  Save(filename string) error  
  Write(writer io.Writer) error  
 
-##Predefined Color  
+## Predefined Color  
 Colors are predefined like CLR_Blue  
 
 - Color Set  
@@ -61,7 +61,7 @@ Colors are predefined like CLR_Blue
  ColorDencity(color string, dencity int) string  
  // use like ColorDencity(ge.CLR_Blue, 20)
 
-##Style Command  
+## Style Command  
 Styles are stored as map[string]*xlsx.Style
 
 - Create Style  
@@ -102,7 +102,7 @@ SetFill(keyname string, pattern string,	fgColor string, bgColor string)
 - Merge Cells  
  Merge(rowno int, colno int, toRowNo int, toColNo int)
 
-##Value / Format Set Command  
+## Value / Format Set Command  
  SetInt(rowno int, colno int, i int)  
  SetIntFormat(rowno int, colno int, i int, fmt string)   
  SetFloat(rowno int, colno int, f float64)  
@@ -116,11 +116,11 @@ SetFill(keyname string, pattern string,	fgColor string, bgColor string)
  SetFormulaFormat(rowno int, colno int, formula string, fmt string)
  SetFormat(rowno int, colno int, fmt string)  
 
-##License  
+## License  
 
  goexcel is released under the MIT License. It is copyrighted by Masanobu Shimura. (Gmail mikeshimura)
 
-##Sample program
+## Sample program
 
  [sample source](https://github.com/mikeshimura/goexcel/blob/master/example/simple1.go)
  ```go
