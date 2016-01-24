@@ -62,7 +62,7 @@ func (e *Goexcel) GetRow(no int) *xlsx.Row {
 	//fmt.Printf("addRowNo %v \n", addRowNo)
 	for i := 0; i < addRowNo; i++ {
 		e.Sheet.AddRow()
-		fmt.Printf("i %v \n", i)
+		//fmt.Printf("i %v \n", i)
 	}
 
 	return e.Sheet.Rows[no]
@@ -73,7 +73,7 @@ func (e *Goexcel) GetCell(rowno int, colno int) *xlsx.Cell {
 	//fmt.Printf("addColNo %v \n", addColNo)
 	for i := 0; i < addColNo; i++ {
 		row.AddCell()
-		fmt.Printf("i %v \n", i)
+		//fmt.Printf("i %v \n", i)
 	}
 
 	return row.Cells[colno]
@@ -207,6 +207,12 @@ func (e *Goexcel) Merge(rowno int, colno int, toRowNo int, toColNo int) {
 func (e *Goexcel) SetFormula(rowno int, colno int, formula string) {
 	cell := e.GetCell(rowno, colno)
 	cell.SetFormula(formula)
+}
+func (e *Goexcel) SetFormulaFormat(rowno int, colno int, formula string, fmtx string) {
+	cell := e.GetCell(rowno, colno)
+	cell.SetFormula(formula)
+	cell.NumFmt = fmtx
+	fmt.Printf("fmt %v\n",fmtx)
 }
 func (e *Goexcel) CreateStyleByKey(keyname string, font string, size int, border string,
 	borderPattern string) {
