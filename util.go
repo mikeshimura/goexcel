@@ -2,7 +2,7 @@ package goexcel
 
 import (
 	"encoding/hex"
-	"github.com/golang/image/colornames"
+	"golang.org/x/image/colornames"
 	"strconv"
 	"strings"
 )

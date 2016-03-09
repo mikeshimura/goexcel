@@ -119,6 +119,26 @@ func (e *Goexcel) SetString(rowno int, colno int, s string) {
 	cell := e.GetCell(rowno, colno)
 	cell.SetString(s)
 }
+func (e *Goexcel) Type(rowno int, colno int) xlsx.CellType {
+	cell := e.GetCell(rowno, colno)
+	return cell.Type()
+}
+func (e *Goexcel) String(rowno int, colno int) string {
+	cell := e.GetCell(rowno, colno)
+	return cell.String()
+}
+func (e *Goexcel) Float(rowno int, colno int) (float64, error) {
+	cell := e.GetCell(rowno, colno)
+	return cell.Float()
+}
+func (e *Goexcel) Int64(rowno int, colno int) (int64, error) {
+	cell := e.GetCell(rowno, colno)
+	return cell.Int64()
+}
+func (e *Goexcel) Formula(rowno int, colno int) string {
+	cell := e.GetCell(rowno, colno)
+	return cell.Formula()
+}
 func (e *Goexcel) SetInt(rowno int, colno int, i int) {
 	cell := e.GetCell(rowno, colno)
 	fmt := cell.GetNumberFormat()

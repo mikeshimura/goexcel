@@ -5,8 +5,8 @@ import (
 )
 
 func TestSimple1(t *testing.T) {
-	Simple1()
-	ParameterSample()
-	ParameterSample2()
+//	Simple1()
+//	ParameterSample()
+//	ParameterSample2()
 
 }
