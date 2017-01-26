@@ -123,7 +123,7 @@ func (e *Goexcel) Type(rowno int, colno int) xlsx.CellType {
 	cell := e.GetCell(rowno, colno)
 	return cell.Type()
 }
-func (e *Goexcel) String(rowno int, colno int) string {
+func (e *Goexcel) String(rowno int, colno int) (string, error) {
 	cell := e.GetCell(rowno, colno)
 	return cell.String()
 }
