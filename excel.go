@@ -127,11 +127,11 @@ func (e *Goexcel) String(rowno int, colno int) (string) {
 	cell := e.GetCell(rowno, colno)
 	return cell.String()
 }
-func (e *Goexcel) Float(rowno int, colno int) (float64) {
+func (e *Goexcel) Float(rowno int, colno int) (float64, error) {
 	cell := e.GetCell(rowno, colno)
 	return cell.Float()
 }
-func (e *Goexcel) Int64(rowno int, colno int) (int64) {
+func (e *Goexcel) Int64(rowno int, colno int) (int64, error) {
 	cell := e.GetCell(rowno, colno)
 	return cell.Int64()
 }
