@@ -123,15 +123,15 @@ func (e *Goexcel) Type(rowno int, colno int) xlsx.CellType {
 	cell := e.GetCell(rowno, colno)
 	return cell.Type()
 }
-func (e *Goexcel) String(rowno int, colno int) (string, error) {
+func (e *Goexcel) String(rowno int, colno int) (string) {
 	cell := e.GetCell(rowno, colno)
 	return cell.String()
 }
-func (e *Goexcel) Float(rowno int, colno int) (float64, error) {
+func (e *Goexcel) Float(rowno int, colno int) (float64) {
 	cell := e.GetCell(rowno, colno)
 	return cell.Float()
 }
-func (e *Goexcel) Int64(rowno int, colno int) (int64, error) {
+func (e *Goexcel) Int64(rowno int, colno int) (int64) {
 	cell := e.GetCell(rowno, colno)
 	return cell.Int64()
 }
